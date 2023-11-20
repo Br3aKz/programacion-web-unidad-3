@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de notas</title>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <form action="/ejercicio1" method="post">
+        <label for="nota1">Nota 1:</label>
+        <br>
+        <input type="number" id="nota1" name="nota1" min="10" max="70" required>
+        <br>
+
+        <label for="nota2">Nota 2:</label>
+        <br>
+        <input type="number" id="nota2" name="nota2" min="10" max="70" required>
+        <br>
+
+        <label for="nota3">Nota 3:</label>
+        <br>
+        <input type="number" id="nota3" name="nota3" min="10" max="70" required>
+        <br>
+
+        <label for="asistencia">Asistencia(%):</label>
+        <br>
+        <input type="number" id="asistencia" name="asistencia" min="0" max="100" required>
+        <br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if resultado %}
+        <p>{{ resultado['promedio'] }}<br>{{ resultado['aprobado'] }}</p>
+    {% endif %}
+</body>
+</html>
